@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+		},
+	],
+	"build_systems":
+	[
+		{
+			"name": "Playdate",
+			"working_dir": "${project_path:${folder}}",
+			"shell_cmd": "pdc ./Source Pizza.pdx && open Pizza.pdx",
+		}
+	],
+}
