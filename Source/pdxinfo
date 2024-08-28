@@ -1,6 +1,7 @@
-name=Pizza
+name=Pizza Hunt
 author=HTeuMeuLeu
-description=Something for the Playdate pizza cover.
+description=Something for the Playdate Pizza Cover.
 bundleID=com.hteumeuleu.pizza
 version=1.0.0
 buildNumber=1
+imagePath=SystemAssets

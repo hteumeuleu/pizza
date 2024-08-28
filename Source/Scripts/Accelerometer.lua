@@ -21,11 +21,11 @@ function Accelerometer:init(x, y, z)
 
 end
 
-function Accelerometer:__tostring()
+-- function Accelerometer:__tostring()
 
-	return "{" .. self.x .. ", " .. self.y .. ", " .. self.z .. "}"
+-- 	return "{" .. self.x .. ", " .. self.y .. ", " .. self.z .. "}"
 
-end
+-- end
 
 function Accelerometer:read()
 
@@ -34,10 +34,16 @@ function Accelerometer:read()
 
 end
 
+function Accelerometer:copy()
+
+	return Accelerometer(self.x, self.y, self.z)
+
+end
+
 function Accelerometer:round()
 
 	local round = function(n)
-		return math.floor(n * 10 + 0.5) / 10
+		return clamp(math.floor(n * 10 + 0.5) / 10, 0, 1)
 	end
 	self.x = round(self.x)
 	self.y = round(self.y)

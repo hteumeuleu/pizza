@@ -1,2 +1,3 @@
-# pizza
-Something for the Playdate pizza cover.
+# Pizza Hunt
+
+Something for the Playdate Pizza Cover.
