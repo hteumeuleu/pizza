@@ -43,7 +43,7 @@ function PlayView:draw()
 		img = gfx.image.new(self.width, self.height, gfx.kColorClear)
 	end
 	gfx.pushContext(img)
-		gfx.drawTextInRect("Game in progress…\nPress Ⓑ to skip.", 10, 10, 380, 220)
+		gfx.drawTextInRect(gfx.getLocalizedText("in progress", "en"), 10, 10, 380, 220)
 	gfx.popContext()
 	self:setImage(img)
 

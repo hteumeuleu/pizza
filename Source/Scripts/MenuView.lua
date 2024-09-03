@@ -43,7 +43,7 @@ function MenuView:draw()
 		img = gfx.image.new(self.width, self.height, gfx.kColorClear)
 	end
 	gfx.pushContext(img)
-		gfx.drawTextInRect("Welcome to Pizza Hunt! Put on your prettiest Playdate cover and start hunting.\n\nPress Ⓐ to start.", 10, 10, 380, 220)
+		gfx.drawTextInRect(gfx.getLocalizedText("welcome", "en"), 10, 10, 380, 220)
 	gfx.popContext()
 	self:setImage(img)
 

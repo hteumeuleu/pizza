@@ -43,7 +43,7 @@ function EndView:draw()
 		img = gfx.image.new(self.width, self.height, gfx.kColorClear)
 	end
 	gfx.pushContext(img)
-		gfx.drawTextInRect("Congratulations!\nPress Ⓐ to restart.", 10, 10, 380, 220)
+		gfx.drawTextInRect(gfx.getLocalizedText("congrats", "en"), 10, 10, 380, 220)
 	gfx.popContext()
 	self:setImage(img)
 
