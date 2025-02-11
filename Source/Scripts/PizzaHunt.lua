@@ -1,3 +1,4 @@
+import "Scripts/Accelerometer"
 import "Scripts/MenuView"
 import "Scripts/PlayView"
 import "Scripts/EndView"
@@ -22,12 +23,6 @@ end
 
 function PizzaHunt:update()
 
-	if self.status == kStatusPlay then
-		if pd.buttonIsPressed(pd.kButtonB) then
-			self:changeView(kStatusEnd)
-		end
-	end
-
 end
 
 function PizzaHunt:setInputHandlers()
@@ -38,6 +33,11 @@ function PizzaHunt:setInputHandlers()
 				self:changeView(kStatusPlay)
 			elseif self.status == kStatusEnd then
 				self:changeView(kStatusMenu)
+			end
+		end,
+		BButtonDown = function()
+			if self.status == kStatusPlay then
+				self:changeView(kStatusEnd)
 			end
 		end
 	}

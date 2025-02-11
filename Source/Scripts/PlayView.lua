@@ -14,6 +14,7 @@ function PlayView:init()
 	self:moveTo(0, 0)
 	self:draw()
 	self:add()
+	self.previousAccelerometer = Accelerometer()
 	return self
 
 end
@@ -23,6 +24,17 @@ end
 function PlayView:update()
 
 	PlayView.super.update(self)
+	local currentAccelerometer = Accelerometer()
+	local img = self:getImage()
+	gfx.pushContext(img)
+		gfx.setColor(gfx.kColorClear)
+		gfx.fillRect(10, 60, 380, 40)
+		gfx.setColor(gfx.kColorBlack)
+		gfx.drawText(self.previousAccelerometer:__tostring() .. "", 10, 60)
+	gfx.popContext()
+	self:setImage(img)
+
+	self.previousAccelerometer = currentAccelerometer
 
 end
 

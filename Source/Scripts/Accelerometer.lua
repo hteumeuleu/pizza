@@ -21,11 +21,11 @@ function Accelerometer:init(x, y, z)
 
 end
 
--- function Accelerometer:__tostring()
+function Accelerometer:__tostring()
 
--- 	return "{" .. self.x .. ", " .. self.y .. ", " .. self.z .. "}"
+	return "{" .. self.x .. ", " .. self.y .. ", " .. self.z .. "}"
 
--- end
+end
 
 function Accelerometer:read()
 
